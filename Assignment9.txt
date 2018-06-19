@@ -1,0 +1,44 @@
+package javaapplication1;
+
+import java.io.IOException;
+import java.io.File;
+import java.io.FileInputStream;
+
+public class File
+{
+ public static void main(String []args)
+  {
+   File file=new File("C:\\Users\\Bestbuy\\Desktop\\file.txt");
+   FileInputStream e=null;
+   try
+   {
+       e = new FileInputStream(file);
+       System.out.println("total file size read in bytes : "+e.available());
+       int c;
+       while((c=e.read())!=-1)
+       {
+           System.out.print((char)c);
+       }
+       String absolutepath=file.getAbsolutePath();
+       System.out.println("");
+       System.out.println("file path : "+absolutepath);
+   }catch(IOException a)
+   {
+       a.printStackTrace();
+       
+   }finally
+   {
+       try
+       {
+           if(e!=null)
+               e.close();
+           
+       }catch(IOException ex)
+       {
+               ex.printStackTrace();
+       }
+       
+   }
+  }
+  
+}
