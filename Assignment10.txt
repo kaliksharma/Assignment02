@@ -1,0 +1,19 @@
+package filehandling;
+import java.io.*;
+ class Copy {
+    public static void main(String []args) throws IOException
+    {
+         File fileA=new File("C:\\Users\\Bestbuy\\Desktop\\kalik1.txt");
+         File fileB=new File("C:\\Users\\Bestbuy\\Desktop\\kalik2.txt");
+         FileReader in=new FileReader(fileA);
+         FileWriter out = new FileWriter(fileB,true);
+         int c;
+         while((c=in.read())!=-1)
+         {
+         out.write((char)c);
+         }
+         in.close();
+         out.close();
+    }
+ }
+   }
