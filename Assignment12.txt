@@ -1,0 +1,46 @@
+Q1
+
+package javaapplication1;
+import java.util.*;
+public class union 
+{
+       public static void main(String[] args )
+       {
+           HashSet hashset=new HashSet();
+           hashset.add("J");
+           hashset.add("A");
+           hashset.add("V");
+           hashset.add("A");
+             
+           HashSet hash=new HashSet();
+          
+           hashset1.add("A");
+           hashset1.add("V");
+          
+           hashset.retainAll(hash);
+           System.out.println(hashset);
+       }
+}
+Q2
+
+
+package javaapplication1;
+
+import java.util.*;
+public class replace {
+  public static void main(String []args)
+  {
+      Map obj = new HashMap();
+      obj.put("Burger",130);
+      obj.put("pizza",200);
+      obj.put("Pasta",100);
+      
+      System.out.println(obj);
+      obj.put("Burger",130);
+      obj.put("pizza",200);
+      obj.put("Beer",100);
+      
+      obj.replace("Pasta",100,150);
+       System.out.println(obj);
+  }
+}
